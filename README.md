@@ -1,7 +1,7 @@
 # focused_crawler
 
 ## Prerequisites
-To start the REST API, Java Servlet is required. Focused crawler REST API runs under [Tomcat](http://tomcat.apache.org/).
+To start the focused crawler REST API service, Java Servlet is required. [Find out more about Tomcat Java Servlet](http://tomcat.apache.org/).
 
 ## Installation
 
