@@ -23,18 +23,18 @@ Copy the war into do the deployment directory of your installed Java Servlet (e.
 ##Methods
 The individual methods are accessible through URL once the REST API setup succeeded. 
 
-The URL is formatted as: 
+The URL is formatted as: http://route to the api/CrawlAPI/method_name?parameter_1=value_1e&parameter_2=value_2
 
-http://route to the api/CrawlAPI/method_name?parameter_1=value_1e&parameter_2=value_2
+e.g. http://tmocatserver.xxx.yyy.de:8080/api/CrawlAPI/crawl?seeds=http://dbpedia.org/resource/Berlin;http://dbpedia.org/resource/Social_Democratic_Party_of_Germany;&user=1&depth=2
 
-###Initiate a crawl
+###1. Initiate a crawl
 Method name: crawl
 
 Parameters: {seeds, user, depth}
 
 Output: The crawl identification number, which is later used to perform other operations implemented in the focused crawling module.
 
-###Filter crawled entity candidates
+###2. Filter crawled entity candidates
 
 Method: filterCrawlCandidates
 
@@ -42,7 +42,7 @@ Parameters: {crawl_id, crawl_filter}
 
 Output: Confirmation that the particular candidate entities are filtered out from the candidate entity set.
 
-###Export crawl data to SDAS
+###3. Export crawl data to SDAS
 Method: exportToSDA
 
 Parameters: {crawl_id}
@@ -50,35 +50,42 @@ Parameters: {crawl_id}
 Output: A message confirming that the crawled entity candidates are exported
 successfully into the SDA.
 
-###Delete a crawl
+###4. Delete a crawl
 Method: deleteCrawl
 
 Parameters: {crawl_id}
 
 Output: A message confirming that all information (crawled candidates and meta-data regarding the crawl) from a specific crawl are deleted.
 
-###Load a crawl
+###5. Load a crawl
 Method: loadCrawl
 
 Parameters: {crawl_id}
 
 Output: A ranked list of crawled candidate entities.
 
-###Load the list of running crawls
+###6. Load the list of running crawls
 Method: loadAllRegisteredCrawls
 
 Parameters: {N/A}
 
 Output: The list of all running/finished crawls, with the detailed crawl metadata.
 
-###Load the list of finished crawls.
+###7. Load the list of all crawls.
+Method: loadAllRegisteredCrawls
+
+Parameters: {N/A}
+
+Output: The list of all running/finished crawls, with the detailed crawl metadata.
+
+###8. Load the list of finished crawls.
 Method: loadFinishedCrawls
 
 Parameters: {N/A}
 
-The list of all finished crawls, with the detailed crawl metadata.
+Output: The list of all finished crawls, with the detailed crawl metadata.
 
-###Load the list of all crawls initiated by a specific user
+###9. Load the list of all crawls initiated by a specific user
 Method: loadCrawlsByUser
 
 Parameters: {user}
@@ -86,7 +93,7 @@ Parameters: {user}
 Output: The list of all crawls initiated by a specific user, with the detailed crawl
 metadata.
 
-###Load the list of all crawls containing a specific seed entity
+###10. Load the list of all crawls containing a specific seed entity
 Method: loadCrawlsBySeed
 
 Parameters: {seeds}
