@@ -1,9 +1,5 @@
 # focused_crawler
 
-The crawling process is initiated by first providing a seed list that encodes the information need.
-The seed list is in the form of entity URIs, usually coming from publicly available knowledge bases (i.e. DBpedia). 
-The individual methods are accessible under the REST API and by the specific methods names, please find the details in the Methods section.
-
 ## Prerequisites
 To start the REST API, the web service enviroment is required. Our API runs under [Tomcat](http://tomcat.apache.org/).
 
