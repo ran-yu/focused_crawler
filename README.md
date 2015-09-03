@@ -14,7 +14,7 @@ To setup the API follow these steps:
 > mvn war:war
 ```
 This will build the war file in the target directory.
-Copy the war into do the deployment directory of your installed Java Servlet (e.g. apache-tomcat/webapps/) container.
+Copy the war into the deployment directory of your installed Java Servlet (e.g. apache-tomcat/webapps/) container.
 
 ##Methods
 The individual methods are accessible through URL once the REST API setup succeeded. 
